@@ -1,0 +1,2464 @@
+:root {
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* background-color: blue; */
+  overflow-x: hidden;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+ */
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+.noto-color emoji-regular {
+  font-family: "Noto Color Emoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+
+.noto-sans-f4 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.magnify {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  background-color: #ccc; /* or any color */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.magnify:hover {
+  z-index: 200;
+  transform: scale(1.4); /* Adjust the scale factor as needed */
+}
+
+/* HOME LOADING ANIMATION */
+
+#loading-animation > div {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: #202124;
+  position: fixed;
+  left: 0;
+  top: 0;
+  animation: reveal 0.8s cubic-bezier(0.5, 0, 0.5, 1) 2s forwards reverse;
+  transform-origin: 50% 100%;
+  z-index: 100000;
+}
+
+#loading-animation > div > figure {
+  color: #e4002b;
+  display: block;
+  margin: 0 auto;
+  max-width: 20%;
+  position: relative;
+}
+
+body > div.home-loading-animation > figure > svg {
+  color: #e4002b;
+  display: block;
+  fill: currentColor;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+#loading-animation > div > figure > svg > path.strip-1 {
+  animation: reveal 0.8s cubic-bezier(0.15, 0.45, 0.6, 1) forwards;
+  transform-origin: bottom;
+  animation-delay: 0.1s; /* Adjust delay as needed */
+  color: #e4002b;
+}
+
+#loading-animation > div > figure > svg > path.strip-2 {
+  animation: reveal 0.8s cubic-bezier(0.15, 0.45, 0.6, 1) forwards;
+  transform-origin: bottom;
+  animation-delay: 0.3s; /* Adjust delay as needed */
+  color: #e4002b;
+}
+
+#loading-animation > div > figure > svg > path.strip-3 {
+  animation: reveal 0.8s cubic-bezier(0.15, 0.45, 0.6, 1) forwards;
+  transform-origin: bottom;
+  animation-delay: 0.5s; /* Adjust delay as needed */
+  color: #e4002b;
+}
+
+@keyframes reveal {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+/* #loading-animation > div > figure > svg > path.strip-1{
+  animation: reveal .8s cubic-bezier(.15,.45,.6,1) forwards;
+  color: #e4002b;
+  d: path("M 0 0 h 8 v 20 H 0 Z");
+  fill: currentColor;
+  transform: scaleY(0);
+}
+
+#loading-animation > div > figure > svg > path.strip-2 {
+  animation-delay: .3s;
+  animation: reveal .8s cubic-bezier(.15,.45,.6,1) forwards;
+  color: #e4002b;
+  d: path("M 16 0 h 8 v 20 h -8 Z");
+  fill: currentColor;
+  transform: scaleY(0);
+}
+
+#loading-animation > div > figure > svg > path.strip-3 {
+  animation-delay: .6s;
+  animation: reveal .8s cubic-bezier(.15,.45,.6,1) forwards;
+  color: #e4002b;
+  d: path("M 32 0 h 8 v 20 h -8 Z");
+  fill: currentColor;
+  transform: scaleY(0);
+} */
+
+/* HEADER */
+
+#header > div.sticky-header-banner {
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 9999;
+  top: 0;
+  position: sticky;
+}
+
+#kfc-banner-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 0;
+  height: 50px;
+  margin-right: 1.2%;
+}
+
+#kfc-banner-image > img {
+  text-align: left;
+  border-style: none;
+  vertical-align: middle;
+  height: 18px;
+  width: 13px;
+  margin-right: 10px;
+  margin-top: -1px;
+}
+
+#kfc-banner-image > div {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #202124;
+  font-family: "National 2 Regular";
+  height: 32px;
+  padding-top: 5px;
+  line-height: 24px;
+}
+
+#kfc-banner-image > button {
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  border-radius: 10rem;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  height: 32px;
+  font-size: 12px;
+  width: 99px;
+  font-family: "National2-Medium";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 5px 9px;
+  margin-left: 23px;
+  background-color: #202124 !important;
+  color: #fff !important;
+  border: 1px solid #494949 !important;
+}
+
+#header > div.sticky-header-banner > hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+  margin: 0;
+  border-top: 1px solid #dbdbdb;
+  display: block;
+}
+
+/* xxxxxxxxxxxxxxx */
+
+#header > div.sticky-header-banner > div.desktop.header {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  background: #fff;
+  height: 100px;
+  z-index: 9999;
+  top: 0;
+  position: sticky;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > span.headerLogo {
+  cursor: pointer;
+  list-style: none;
+  margin: 38px 44.26px 39.48px 130px;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > span.headerLogo > img {
+  border-style: none;
+  cursor: pointer;
+  list-style: none;
+  vertical-align: middle;
+  width: 76px;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > span.navItemsLeft {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  font-family: "National 2 Test";
+  font-weight: 500;
+  list-style: none;
+  padding-top: 4px;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > span.navItemsLeft > a {
+  align-items: center;
+  background-color: transparent;
+  color: #202124;
+  cursor: pointer;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  list-style: none;
+  margin-right: 43px;
+  padding: 0;
+  text-decoration: none;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > span.navItemsLeft > a > button {
+  all: unset;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex!important;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  list-style: none;
+  margin: 0;
+  overflow: visible;
+  position: relative;
+  text-transform: none;
+  /* white-space: pre; */
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div.navItemsRight {
+  box-sizing: border-box;
+  display: flex;
+  font-weight: 500;
+  list-style: none;
+  margin-right: 131.22px;
+  position: absolute;
+  right: 0;
+  width: auto;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a.navigation-link.nav-right-items-line.nav-item {
+    align-items: center;
+    background-color: transparent;
+    border-right: 1px solid #e3e3e3;
+    color: #202124;
+    cursor: pointer;
+    display: flex;
+    font-family: "National2-Medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    list-style: none;
+    margin: 5% 0;
+    padding: 0 15px;
+    text-decoration: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a.navigation-link.nav-right-items-line.nav-item > button {
+    all: unset;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex!important;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    margin: 0;
+    overflow: visible;
+    position: relative;
+    text-transform: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a.navigation-link.nav-right-items-line.nav-item > button > div {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    text-transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a.navigation-link.nav-right-items-line.nav-item > button > div > img {
+    border-style: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    text-transform: none;
+    vertical-align: middle;
+    
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a.navigation-link.nav-right-items-line.nav-item > button > div > span {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    line-height: inherit;
+    list-style: none;
+    margin-left: 1rem!important;
+    text-transform: capitalize;
+    
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(2) {
+    align-items: center;
+    background-color: transparent;
+    color: #202124;
+    cursor: pointer;
+    display: flex;
+    font-family: "National2-Medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    list-style: none;
+    padding: 0 15px;
+    text-decoration: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(2) > button {
+    all: unset;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex!important;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    margin: 0;
+    overflow: visible;
+    position: relative;
+    text-transform: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(2) > button > span {
+  
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 47px;
+    list-style: none;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 3px;
+    text-transform: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(2) > button > div {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+    align-items: center!important;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    justify-content: center!important;
+    line-height: inherit;
+    list-style: none;
+    text-transform: none;
+    white-space: pre;
+    width: 3.2rem;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(2) > button > div > img {
+  box-sizing: border-box;
+    border-style: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    max-width: 100%;
+    text-transform: none;
+    vertical-align: middle;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(2) > button > div > div {
+    align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    font-family: "National 2 Condensed";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 15px;
+    list-style: none;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    text-align: center;
+    text-transform: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(3) {
+    align-items: center;
+    background-color: transparent;
+    color: #202124;
+    cursor: pointer;
+    display: none;
+    font-family: "National2-Medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    list-style: none;
+    padding: 0 15px;
+    text-decoration: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(3) > button {
+    all: unset;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex!important;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    margin: 0;
+    overflow: visible;
+    position: relative;
+    text-transform: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(3) > button > span {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 47px;
+    list-style: none;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 3px;
+    text-transform: none;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(3) > button > div {
+    align-items: center!important;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    justify-content: center!important;
+    line-height: inherit;
+    list-style: none;
+    text-transform: none;
+    white-space: pre;
+    width: 3.2rem;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(3) > button > div > img {
+    border-style: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    max-width: 100%;
+    text-transform: none;
+    vertical-align: middle;
+    white-space: pre;
+}
+
+#header > div.sticky-header-banner > div.desktop.header > div > div.nav > div > a:nth-child(3) > button > div > div {
+    align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    font-family: "National 2 Condensed";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 15px;
+    list-style: none;
+    position: absolute;
+    right: 22px;
+    text-align: center;
+    text-transform: none;
+    white-space: pre;
+}
+
+/* MODAL */
+
+.modal {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  display: none;
+  text-align: left;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgba(32,33,36,.6509803921568628);
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-clip: padding-box;
+  background-color: #fff;
+  border-radius: .3rem;
+  border: 1px solid rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  left: 20%;
+  outline: 0;
+  pointer-events: auto;
+  position: absolute;
+  top: 10%;
+  width: 60%;
+}
+
+#myModal > div > div.modal-header {
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  border-radius: 5px 5px 0 0;
+  color: #202124;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  justify-content: space-between;
+  letter-spacing: .5px;
+  line-height: 24px;
+  padding: 2% 1%;
+  pointer-events: auto;
+  text-transform: uppercase;
+}
+
+#dispostion_selector {
+  color: #202124;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 24px;
+  margin: auto;
+  pointer-events: auto;
+  text-transform: uppercase;
+}
+
+#myModal > div > div.modal-header > button {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  pointer-events: auto;
+  position: absolute;
+  right: 2%;
+  text-transform: none;
+}
+
+#myModal > div > div.modal-header > button > img {
+  border-style: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  pointer-events: auto;
+  text-transform: none;
+  vertical-align: middle;
+  width: 80%;
+}
+
+#myModal > div > div.modal-body {
+  background: #f8f7f5;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 9px rgba(0,0,0,.15);
+  flex: 1 1 auto;
+  height: 80%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 3%;
+  pointer-events: auto;
+  position: relative;
+}
+
+#myModal > div > div.modal-body > div {
+  margin: 0 20%;
+  pointer-events: auto;
+  text-align: center;
+}
+
+#myModal > div > div.modal-body > div > h3 {
+  color: #202124;
+  font-family: "Montserrat", sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: .5rem;
+  margin-top: 0;
+  pointer-events: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#myModal > div > div.modal-body > div > div {
+  color: #202124;
+  font-family: "National 2 Regular";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  margin-top: 5%;
+  pointer-events: auto;
+  text-align: center;
+}
+
+#myModal > div > div.modal-body > div > form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  pointer-events: auto;
+  text-align: center;
+}
+
+/* Modal container */
+/* .modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+} */
+
+/* Modal content */
+/* .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10001;
+} */
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+#headermenu-id {
+  height: 104vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.1s;
+  padding-top: 0;
+  z-index: 10000;
+}
+
+#headermenu-id > div.nav.mobile-modal-header {
+  background: #fff;
+  padding-left: 3% !important;
+  height: 45px;
+  border-radius: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#headermenu-id
+  > div.nav.mobile-modal-header
+  > a.navigation-link.hamburger-close-btn.nav-item {
+  letter-spacing: 1px;
+  list-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  white-space: pre;
+  font-family: "National2-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #202124;
+  text-decoration: none;
+  padding: 0 2%;
+  width: 39%;
+}
+
+#headermenu-id
+  > div.nav.mobile-modal-header
+  > a.navigation-link.hamburger-close-btn.nav-item
+  > button {
+  border-radius: 0;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+  text-transform: none;
+  display: flex !important;
+  font-family: "National 2 Regular";
+  font-weight: 400;
+  font-style: normal;
+  background: #fff;
+  border: none;
+  all: unset;
+  cursor: pointer;
+  position: relative;
+}
+
+#headermenu-id > div.nav.mobile-modal-header > span {
+  font-weight: 400;
+  color: #212529;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  list-style: none;
+  box-sizing: border-box;
+  margin: auto;
+  top: 0;
+  position: relative;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+/* #headermenu-id > div.nav.mobile-modal-header > span > div {
+  
+} */
+
+#headermenu-id
+  > div.nav.mobile-modal-header
+  > a.navigation-link.cart-image.nav-item {
+  letter-spacing: 1px;
+  list-style: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  white-space: pre;
+  font-family: "National2-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #202124;
+  text-decoration: none;
+  padding: 0 2%;
+  width: 39%;
+}
+
+#headermenu-id
+  > div.nav.mobile-modal-header
+  > a.navigation-link.cart-image.nav-item
+  > button {
+  list-style: none;
+  white-space: pre;
+  box-sizing: border-box;
+  border-radius: 0;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+  text-transform: none;
+  display: flex !important;
+  font-family: "National 2 Regular";
+  font-weight: 400;
+  font-style: normal;
+  background: #fff;
+  border: none;
+  all: unset;
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+}
+
+#headermenu-id > div.mobile-modal-body {
+  overflow-y: auto;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 5px 5px;
+  height: calc(100% - 53px);
+}
+
+#headermenu-id > div.mobile-modal-body > div {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#headermenu-id > div.mobile-modal-body > div > div.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#headermenu-id > div.mobile-modal-body > div > div.signup-container {
+  display: flex;
+  height: 2vh;
+  align-items: center;
+  font-family: "National 2 Regular";
+  margin-top: 20px;
+}
+
+#headermenu-id > div.mobile-modal-body > div > div.navItemsLeft {
+  text-align: left;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+#headermenu-id > div.mobile-modal-body > div > div.support-div {
+  text-align: left;
+  box-sizing: border-box;
+}
+
+#startorder-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+#startorder-container > div {
+  background: #202124;
+  height: unset !important;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+
+#startorder-container > div > div {
+  color: #212529;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1% auto;
+}
+
+#startorder-container > div > div > div {
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "National 2 Condensed";
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin: auto 15px auto auto;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+}
+
+#startOrderItemButton {
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  min-width: 8.6rem;
+  height: 2.75rem;
+  padding: 0 2.5rem;
+  border: 0;
+  border-radius: 1.4rem;
+  font-size: 0.9rem;
+  line-height: 2.75rem;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  transition-property: background-color, color;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(0.15, 0.45, 0.6, 1);
+  cursor: pointer;
+  background-color: #e4002b;
+  color: #fff;
+}
+
+#DispositionModulePopup {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  color: #212529;
+  text-align: left;
+  margin: 0px;
+  background: #202124;
+  height: unset !important;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+
+#DispositionModulePopup > div {
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#DispositionModulePopup > div > div.modal-header {
+  text-align: left;
+  pointer-events: auto;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 2% 1%;
+  font-style: normal;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #202124;
+  border-bottom: 1px solid #dbdbdb;
+  border-radius: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  background: unset;
+  position: relative;
+}
+
+#DispositionModulePopup > div > div.modal-header > button {
+  border-radius: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+  text-transform: none;
+  display: flex;
+  background-color: transparent;
+  position: absolute;
+  right: 2%;
+  border: none;
+  cursor: pointer;
+}
+
+#DispositionModulePopup > div > div.modal-header > button > img {
+  pointer-events: auto;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border-style: none;
+  vertical-align: middle;
+  width: 80%;
+  z-index: 1000;
+}
+
+#DispositionModulePopup > div > div.modal-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  pointer-events: auto;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  position: relative;
+  background: #f8f7f5;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 5px 5px;
+  height: 100%;
+  padding: 5% 3%;
+  overflow-y: auto;
+}
+
+#DispositionModulePopup > div > div.modal-body > div {
+  text-align: center;
+  margin: 0 8%;
+}
+
+#DispositionModulePopup > div > div.modal-body > div > h3 {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "National 2 Condensed";
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #202124;
+  font-size: 20px;
+  line-height: 22px;
+  width: 66%;
+  margin: auto;
+}
+
+#DispositionModulePopup > div > div.modal-body > div > div {
+  pointer-events: auto;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  font-weight: 400;
+  color: #202124;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  margin-top: 5%;
+}
+
+#DispositionModulePopup > div > div.modal-body > div > form {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  pointer-events: auto;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0 10%;
+  flex-direction: column;
+}
+
+#DispositionModuleFormSubmit {
+  pointer-events: auto;
+  box-sizing: border-box;
+  overflow: visible;
+  text-transform: none;
+  min-width: 8.6rem;
+  height: 2.75rem;
+  padding: 0 2.5rem;
+  border: 0;
+  border-radius: 1.4rem;
+  font-size: 0.9rem;
+  line-height: 2.75rem;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  transition-property: background-color, color;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(0.15, 0.45, 0.6, 1);
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.06rem #202124;
+  color: #202124;
+  margin: 1rem 0;
+}
+
+/* SLICK SLIDER */
+
+#slick-slider {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  direction: ltr;
+  unicode-bidi: isolate;
+  box-sizing: border-box;
+  vertical-align: middle;
+  user-select: none;
+  touch-action: pan-y;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slick-list,
+.draggable {
+  height: 350px;
+  margin: 0;
+  padding: 0;
+  transform: translateZ(0);
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.slick-track {
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  top: 0;
+  transform: translate3d(-2574px, 0px, 0px);
+  width: 9009px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.slick-slide,
+.slick-cloned {
+  float: left;
+  height: auto;
+  min-height: 1px;
+  opacity: 1;
+  width: 30%;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+#slick-slider > div > div > div > img {
+  border-style: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  vertical-align: middle;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* .slick-dots {
+  bottom: 6%!important;
+  left: 229px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: auto!important;
+} */
+
+/* (Original) */
+/* .slick-dots {
+  bottom: -25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+} */
+
+.slick-dots {
+  bottom: -25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* .slick-list, .draggable (original){
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  transform: translate3d(0, 0, 0);
+} */
+
+/* GENERAL MENU */
+
+#general-menu > div {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  margin-left: 140px;
+    margin-right: 80px;
+}
+
+#general-menu > div > div.browse-parent.d-flex.mx-2 {
+  display: flex !important;
+  margin-right: 0.5rem !important;
+  margin-left: 0.5rem !important;
+  margin: 0 2%;
+}
+
+#general-menu > div > div.browse-parent.d-flex.mx-2 > h2 {
+  font-family: "National 2 Condensed";
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #202124;
+  margin-right: 31px;
+  font-size: 38px;
+  line-height: 43px;
+  margin-top: 100px;
+  margin-bottom: 55px;
+}
+
+#general-menu > div > div.browse-parent.d-flex.mx-2 > div {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  border-top: 2px solid #e3e3e3;
+  flex: 1 1;
+  margin-top: 120px;
+  margin-right: 9%;
+}
+
+#general-menu > div > a {
+  text-align: left;
+  box-sizing: border-box;
+  color: #202124;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  display: inline-grid;
+  background: #f8f7f5;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 17.8vw;
+  height: 17.8vw;
+  margin: 1%;
+}
+
+#general-menu > div > a > img {
+  box-sizing: border-box;
+  border-style: none;
+  vertical-align: middle;
+  border-radius: 4px 4px 0 0;
+  width: 17.8vw;
+  height: 13.18519vw;
+}
+
+#general-menu > div > a > div {
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "National 2 Condensed";
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #202124;
+  bottom: 7%;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+#general-menu > div > a.single-lickin-card.menu-cards {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  display: inline-grid;
+  background: #f8f7f5;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  height: 17.8vw;
+  width: 17.8vw;
+  margin: 1%;
+}
+
+#general-menu > div > a.single-lickin-card.menu-cards > img {
+  color: #202124;
+  box-sizing: border-box;
+  border-style: none;
+  vertical-align: middle;
+  border-radius: 4px 4px 0 0;
+  height: 13.18519vw;
+  width: 13.5vw;
+  margin: 0 auto;
+}
+
+#general-menu > div > div.single-lickin-card.menu-cards > a > div {
+  box-sizing: border-box;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  align-items: center;
+  color: #202124;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 2.5vw;
+}
+
+#general-menu > div > div.single-lickin-card.menu-cards > a > div > img {
+  border-style: none;
+  vertical-align: middle;
+  border-radius: 4px 4px 0 0;
+  height: 1vw !important;
+  margin-left: 7px;
+  width: 4vw !important;
+}
+
+/* OFFERS */
+
+#offer-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#offer-slider > div.offers-container {
+  background-color: #202124;
+  box-sizing: border-box;
+  color: #212529;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 90px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.offers-container {
+  background-color: #202124;
+  box-sizing: border-box;
+  color: #212529;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 90px;
+  overflow: hidden;
+  text-align: left;
+}
+
+#offer-slider > div.offers-container > div {
+  margin-left: 12%;
+}
+
+#offer-slider > div.offers-container > div > div.offers-Icon {
+  margin-bottom: 4.6%;
+  margin-left: 3.2%;
+}
+
+.offersCard-container {
+  margin-left: 12%;
+}
+
+
+.offers-Icon {
+  margin-bottom: 4.6%;
+  margin-left: 3.2%;
+}
+
+#offer-slider > div.offers-container > div > div.offers-Icon > div > svg {
+  fill: none;
+  height: 42;
+  vertical-align: middle;
+  width: 80;
+}
+
+#offer-slider > div.offers-container > div > div.offersContainerHeader-items {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  /* margin-left: 3.2%; */
+}
+
+.offersContainerHeader-items {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  margin-left: 3.2%;
+}
+
+#offer-slider > div.offers-container > div > div.offersContainerHeader-items > h2 {
+  color: #fff;
+  font-family: "National 2 Condensed";
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 43px;
+  margin-bottom: .5rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+#offer-slider > div.offers-container > div > div.offersContainerHeader-items > div {
+  color: #fff;
+  margin-right: 167px;
+}
+
+#offer-slider > div.offers-container > div > div.offersContainerHeader-items > div > a {
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-family: "National 2 Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+#offer-slider > div.offers-container > div > div.offersContainerHeader-items > div > div {
+  color: #fff;
+  display: inline-block;
+}
+
+#offer-slider > div.offers-container > div > div.offersContainerHeader-items > div > div > svg {
+  color: #fff;
+  fill: none;
+  height: 7;
+  vertical-align: middle;
+  width: 19;
+}
+
+#offer-slider > div.offers-container > div > div.offersCard-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.offersCard-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#offer-slider > div.offers-container > div > div.offersCard-list > div.offersCarousal-list {
+  margin-bottom: 5.9%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.offersCarousal-list {
+  margin-bottom: 5.9%;
+}
+
+#offer-slider > div.offers-container > div > div.offersCard-list > div.offersCarousal-list > div > div > div {
+  user-select: none;
+}
+
+#offer-slider > div.offers-container > div > div.offersCard-list > div.offersCarousal-list > div > div > div > div {
+  display: inline-block;
+  user-select: none;
+  width: 100%;
+}
+
+.offers-card, .false {
+  background-color: #f8f7f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 9px rgba(0,0,0,.15);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  width: 95%;
+}
+
+#slick-slider-2 > div > div > div > div > div {
+  /* .offers-card, .false */
+  width: 30%;
+}
+
+
+
+.offersRibbon-container {
+  left: -12px;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+  user-select: none;
+  z-index: 1000;
+}
+
+.offers-ribbon {
+  position: relative;
+  text-align: center;
+  user-select: none;
+}
+
+#slick-slide01 > div > div > div > div.offersRibbon-container > div > svg {
+  fill: none;
+  height: 42;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  width: 136;
+}
+
+.ribbon-text {
+  color: #fff;
+  font-family: "National 2 Condensed";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  left: 12px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 4px;
+  user-select: none;
+}
+
+#slick-slider-2 > div > div > div > div > div > img {
+  border-style: none;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  display: block;
+  height: 57%;
+  object-fit: cover;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.offersImageText-background {
+  border-style: none;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  display: block;
+  height: 59%;
+  object-fit: cover;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+
+
+#offer-slider > div.offers-container > div > div.offersCard-list > div.offersCarousal-list > div > div > div > div > div > img {
+  border-style: none;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  display: block;
+  height: 59%;
+  object-fit: cover;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.offersCard-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  user-select: none;
+  position: relative;
+}
+
+.offersImageTextCard-title {
+  color: #e4002b;
+  display: -webkit-box;
+  font-family: "National 2 Condensed";
+  font-size: 38px;
+  font-weight: 700;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  overflow: hidden;
+  user-select: none;
+}
+
+.offersCard-text {
+  color: #202124;
+  display: -webkit-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  height: 48px;
+  text-align: center;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.offersButton-item {
+  align-items: baseline;
+  bottom: -1%;
+  display: flex;
+  justify-content: inherit;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+  /* position: absolute; */
+  text-align: center;
+  user-select: none;
+  width: 100%;
+}
+
+.offersView-details {
+  background: none;
+  border-radius: 0;
+  border: none;
+  color: #494949;
+  cursor: pointer;
+  font-family: "National2-Medium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  overflow: visible;
+  padding: initial;
+  text-decoration: underline;
+  text-transform: none;
+  user-select: none;
+}
+
+.offers-redeem, .button, .transparent-btn, .black-border, .whiteButton, .blackBorder {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 10rem;
+  border: 1px solid #494949!important;
+  color: #202124;
+  cursor: pointer;
+  flex-direction: row;
+  font-family: "National2-Medium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-left: 5px;
+  margin: 0;
+  overflow: visible;
+  padding: .656rem 2.75rem;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+}
+
+/* NEW OFFER SLIDER */
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+}
+
+.slick-slide {
+  /* flex: 0 0 auto; */
+  /* width: 300px; */
+  height: 100%;
+  margin: 0px 10px;
+}
+
+#offer-slider > div > div > div.offersCard-list > div > div > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+  /* background-image: url('left-arrow.png'); */
+  background-image: url('../images/Left_Arrow_WB.png');
+}
+
+.next {
+  right: 10px;
+  background-image: url('../images/Right_Arrow_WB.png');
+}
+
+
+.slick-slide {
+  height: 100%;
+  margin: 0 10px;
+}
+
+.slick-list, .draggable {
+  height: 100%;
+}
+
+
+.slick-track {
+  height: 100%;
+}
+
+
+/* CSS for carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: flex-start;
+  height: 400px;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 100%;
+  margin: auto;
+  height: 400px;
+}
+
+.carousel-item img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* CSS for indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #777;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: #333;
+}
+
+/* .carousel,
+.slide {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-indicators {
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 0;
+  padding-left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 15;
+}
+
+.carousel-inner {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item,
+.active {
+  align-items: center;
+  backface-visibility: hidden;
+  display: block;
+  perspective: 1000px;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  width: 100%;
+}
+
+.carousel-item {
+  align-items: center;
+  backface-visibility: hidden;
+  display: none;
+  perspective: 1000px;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  width: 100%;
+}
+
+.d-block, .w-100{
+  border-style: none;
+  display: block!important;
+  vertical-align: middle;
+  width: 100%!important;
+}
+
+.carousel-control-prev {
+  align-items: center;
+    background-color: transparent;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 15%;
+}
+
+.carousel-control-prev-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background: transparent no-repeat center center;
+  color: #fff;
+  display: inline-block;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+}
+
+.sr-only {
+  border: 0;
+  clip-path: inset(50%);
+  clip: rect(0,0,0,0);
+  color: #fff;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.carousel-control-next {
+  align-items: center;
+  background-color: transparent;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  opacity: .5;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  width: 15%;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background: transparent no-repeat center center;
+  color: #fff;
+  display: inline-block;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+} */
+
+/* FOOTER */
+
+#footer > div {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+#footer > div > footer {
+  display: block;
+  background-color: #202124;
+  padding: 5% 5% 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+}
+
+#footer > div > footer > div.row.row-one.aa {
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-family: "National 2 Regular";
+  font-size: 14px;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+#footer > div > footer > div.row.row-one.aa > a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #202124;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+#footer > div > footer > div.row.row-one.aa > a > img {
+  box-sizing: border-box;
+  border-style: none;
+  vertical-align: middle;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.category-items {
+  font-weight: 400;
+  text-align: left;
+  line-height: 24px;
+  color: #fff;
+  font-family: "National 2 Regular";
+  font-size: 14px;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 42%;
+  margin-left: 2%;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.category-items > div {
+  box-sizing: border-box;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.category-items > div > span {
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.category-items > div > ul {
+  margin-bottom: 1rem;
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+  width: 30%;
+  text-align: left;
+}
+
+#footer
+  > div
+  > footer
+  > div.row.row-one.aa
+  > div.category-items
+  > div
+  > ul
+  > li {
+  list-style: none;
+  display: block;
+  font-style: normal;
+  letter-spacing: -0.1px;
+  margin-top: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #e3e3e3;
+  list-style-type: none;
+}
+
+#footer
+  > div
+  > footer
+  > div.row.row-one.aa
+  > div.category-items
+  > div
+  > ul
+  > li
+  > a {
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  line-height: 22px;
+  padding-right: 40%;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #e3e3e3;
+  white-space: nowrap;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.findstore {
+  font-weight: 400;
+  text-align: left;
+  line-height: 24px;
+  color: #fff;
+  font-family: "National 2 Regular";
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 9%;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.findstore > img {
+  border-style: none;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 7%;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.findstore > a {
+  box-sizing: border-box;
+  background-color: transparent;
+  font-style: normal;
+  line-height: 22px;
+  text-decoration: underline !important;
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.flex.social-btns {
+  font-weight: 400;
+  text-align: left;
+  line-height: 24px;
+  color: #fff;
+  font-family: "National 2 Regular";
+  font-size: 14px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  grid-column-gap: 5%;
+  column-gap: 5%;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.flex.social-btns > a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #202124;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+#footer > div > footer > div.row.row-one.aa > div.flex.social-btns > a > img {
+  text-align: left;
+  color: #202124;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  border-style: none;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#footer > div > footer > div.row.row-two {
+  color: #fff;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  padding-bottom: 14px;
+}
+
+#footer > div > footer > div.row.row-two > div.column.lang-div {
+  display: flex;
+  align-items: center;
+  margin-left: 4%;
+}
+
+#footer > div > footer > div.row.row-two > div {
+  display: flex;
+  align-items: center;
+}
+
+#footer > div > footer > div.row.row-two > div > p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+  line-height: 12px;
+  color: #dbdbdb;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div {
+  color: #fff;
+  text-align: center;
+  font-family: "National 2 Regular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div > div {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  text-align: right;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div > div > div {
+  list-style: none;
+  display: inline-block;
+  margin: 30px;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div > div > div > a {
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+  color: #202124;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  cursor: pointer;
+  padding-right: 40%;
+}
+
+#footer
+  > div
+  > footer
+  > div.row.row-two
+  > div.column.social-div
+  > div
+  > div
+  > a
+  > img {
+  font-family: "National 2 Regular";
+  font-style: normal;
+  box-sizing: border-box;
+  border-style: none;
+  vertical-align: middle;
+}
+
+#footer > div > footer > div.row.row-two {
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  height: 80px;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div > div > div > a > img {
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.1s ease;
+}
+
+#footer > div > footer > div.row.row-two > div.column.social-div > div > div > a > img:hover {
+  z-index: 200;
+  width: 60px;
+  height: 60px;
+  background-image: linear-gradient(to bottom right, yellow, rgb(223, 34, 9));
+  /* transform: scale(1.4); */
+  animation: shake 2s infinite;
+}
+
+@keyframes shake {
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(30deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: rotate(-30deg);
+  }
+}
